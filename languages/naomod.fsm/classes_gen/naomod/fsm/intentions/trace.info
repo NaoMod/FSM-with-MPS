@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="IntentionsDescriptor.java">
+      <unit at="18,0,56,0" name="naomod.fsm.intentions.IntentionsDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:e660b1ef-0ec1-4d6f-a8f0-b4ebf2f4fb77(naomod.fsm.intentions)/8475187935300280724">
+    <file name="IntentionsDescriptor.java">
+      <node id="8475187935300280724" at="37,47,38,54" concept="1" />
+      <node id="8475187935300280724" at="50,52,51,40" concept="1" />
+    </file>
+    <file name="Interpreter_Intention.java">
+      <node id="8475187935300280724" at="20,0,21,0" concept="2" trace="myCachedExecutable" />
+      <node id="8475187935300280724" at="21,34,22,136" concept="7" />
+      <node id="8475187935300280724" at="25,35,26,25" concept="6" />
+      <node id="8475187935300280724" at="29,84,30,16" concept="6" />
+      <node id="8475187935300280724" at="33,35,34,17" concept="6" />
+      <node id="8475187935300280724" at="37,37,38,105" concept="1" />
+      <node id="8475187935300280724" at="39,5,40,30" concept="6" />
+      <node id="8475187935300281058" at="46,87,47,35" concept="6" />
+      <node id="8475187935300316524" at="50,78,51,48" concept="5" />
+      <node id="8475187935300317173" at="51,48,52,63" concept="5" />
+      <node id="8475187935300317836" at="52,63,53,29" concept="1" />
+      <node id="8475187935300280724" at="56,48,57,40" concept="6" />
+      <node id="8475187935300280724" at="43,0,45,0" concept="0" trace="IntentionImplementation#()V" />
+      <node id="8475187935300280724" at="21,0,24,0" concept="0" trace="Interpreter_Intention#()V" />
+      <node id="8475187935300280724" at="36,99,39,5" concept="3" />
+      <node id="8475187935300280724" at="24,0,28,0" concept="4" trace="getPresentation#()Ljava/lang/String;" />
+      <node id="8475187935300280724" at="28,0,32,0" concept="4" trace="isApplicable#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Z" />
+      <node id="8475187935300280724" at="32,0,36,0" concept="4" trace="isSurroundWith#()Z" />
+      <node id="8475187935300280724" at="45,0,49,0" concept="4" trace="getDescription#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/lang/String;" />
+      <node id="8475187935300280724" at="55,0,59,0" concept="4" trace="getDescriptor#()Ljetbrains/mps/openapi/intentions/IntentionDescriptor;" />
+      <node id="8475187935300280724" at="36,0,42,0" concept="4" trace="instances#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)Ljava/util/Collection;" />
+      <node id="8475187935300280724" at="49,0,55,0" concept="4" trace="execute#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <scope id="8475187935300280724" at="43,38,43,38" />
+      <scope id="8475187935300280724" at="21,34,22,136" />
+      <scope id="8475187935300280724" at="25,35,26,25" />
+      <scope id="8475187935300280724" at="29,84,30,16" />
+      <scope id="8475187935300280724" at="33,35,34,17" />
+      <scope id="8475187935300280724" at="37,37,38,105" />
+      <scope id="8475187935300280726" at="46,87,47,35" />
+      <scope id="8475187935300280724" at="56,48,57,40" />
+      <scope id="8475187935300280724" at="43,0,45,0" />
+      <scope id="8475187935300280724" at="21,0,24,0" />
+      <scope id="8475187935300280728" at="50,78,53,29">
+        <var name="context" id="8475187935300316525" />
+        <var name="interpreter" id="8475187935300317174" />
+      </scope>
+      <scope id="8475187935300280724" at="24,0,28,0" />
+      <scope id="8475187935300280724" at="28,0,32,0">
+        <var name="editorContext" id="8475187935300280724" />
+        <var name="node" id="8475187935300280724" />
+      </scope>
+      <scope id="8475187935300280724" at="32,0,36,0" />
+      <scope id="8475187935300280724" at="36,99,40,30" />
+      <scope id="8475187935300280724" at="45,0,49,0">
+        <var name="editorContext" id="8475187935300280724" />
+        <var name="node" id="8475187935300280724" />
+      </scope>
+      <scope id="8475187935300280724" at="55,0,59,0" />
+      <scope id="8475187935300280724" at="36,0,42,0">
+        <var name="context" id="8475187935300280724" />
+        <var name="node" id="8475187935300280724" />
+      </scope>
+      <scope id="8475187935300280724" at="49,0,55,0">
+        <var name="editorContext" id="8475187935300280724" />
+        <var name="node" id="8475187935300280724" />
+      </scope>
+      <unit id="8475187935300280724" at="42,0,60,0" name="naomod.fsm.intentions.Interpreter_Intention$IntentionImplementation" />
+      <unit id="8475187935300280724" at="19,0,61,0" name="naomod.fsm.intentions.Interpreter_Intention" />
+    </file>
+  </root>
+</debug-info>
+

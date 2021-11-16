@@ -1,0 +1,46 @@
+:imagesdir: images/
+
+# FSM with MPS
+
+This implementation shows an implementation of a Domain Specific Language for Finite State Machines with the language workbench MPS.
+
+## Using the DSL
+
+Models can be created using the DSL in the solution naomod.fsm.sandbox.
+
+image:solution_menu.PNG[Solution Menu]
+
+A FSM is already modeled in the ExampleFSM. You can play with it, but we suggest that you create your own instead of modifying the example.
+
+image:example_FSM.PNG[Example FSM]
+
+To create a new FSM, right-click on the sandbox_model, and choose New > FSM. This will open a new window where you can enter a name for your FSM. By placing your cursor on the dots and pressing enter, a new state will be added to this FSM.
+
+image:new_FSM.PNG[New FSM]
+
+This state needs to be named. Keywords _initial_ and _final_ can also be used : place your cursor before the state text, begin typing the keyword and press Ctrl+Space to autocomplete. For each state, outgoing transitions can be specified in the table next to it. Place your cursor on the last line of the table and press Enter to add a new entry. Possible target state can be browsed by pressing Ctrl+Space, while input and output are just regular strings. To add more states, place your cursor at the end of the file and press Enter.
+
+To launch an execution of your automata place your cursor on the first line and either click the lightbulb icon or press Alt+Enter. Then choose 'Run the Interpreter', a small UI should appear.
+
+image:interpreter_intention.png[Interpreter Intention]
+
+You can then enter your input and press the 'Compute' button to trigger the transition with said input (if it exists). To check if the execution is successful (ie. the current state is final), enter an empty input.
+ 
+## Exploring the Definition
+
+The definition of this DSL is done in the language naomod.fsm.
+
+image:language.PNG[Language]
+
+The structure aspect describes the abstract syntax of the DSL. Concepts and their properties are defined, as well as the relations between them.
+
+The editor aspect handles the defintion of the concrete syntax for our language. The plugin de.slisson.mps.tables is used to manipulate the tabular notation.
+
+The constraints aspect is used to describe part of the static semantics, the other part is in the typesystem aspect.
+
+The behavior aspect describes operationnal semantics for the State concept, as well as classes implementing the interpreter. FSMInterpreter is the interpreter itself, FSMContext is the class storing the execution context and is used by the interpreter, and UI handles the graphical interface used by the user to interact with the interpreter. The button launching the interpreter is described in the intention aspect.
+
+## Known Issues
+
+* At the initialisation of the FSM, a StateReference is already contained in _finalStates_ but it doesn't reference any state (as none exist yet).
+* Deleting a state will not remove the references if it was final or initial.

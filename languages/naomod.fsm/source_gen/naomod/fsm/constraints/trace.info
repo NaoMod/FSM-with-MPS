@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,29,0" name="naomod.fsm.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:9485bbbe-5370-4b6f-8cd0-b06ef68fe9d2(naomod.fsm.constraints)/8475187935300100666">
+    <file name="Transition_Constraints.java">
+      <node id="8475187935300100666" at="22,35,23,34" concept="8" />
+      <node id="103087747853776422" at="30,116,31,20" concept="4" />
+      <node id="2096816813680140394" at="34,119,35,63" concept="5" />
+      <node id="103087747853930363" at="37,43,38,103" concept="4" />
+      <node id="103087747854041625" at="40,11,41,0" concept="6" />
+      <node id="103087747853986976" at="41,0,42,194" concept="3" />
+      <node id="103087747854006380" at="42,194,43,80" concept="1" />
+      <node id="103087747853804841" at="43,80,44,127" concept="1" />
+      <node id="103087747854020147" at="44,127,45,0" concept="6" />
+      <node id="103087747854029849" at="45,0,46,85" concept="1" />
+      <node id="8475187935300100666" at="48,6,49,131" concept="3" />
+      <node id="103087747853776422" at="49,131,50,42" concept="1" />
+      <node id="8475187935300100666" at="50,42,51,22" concept="4" />
+      <node id="8475187935300100666" at="55,0,56,0" concept="7" trace="Transition$kc" />
+      <node id="8475187935300100666" at="59,0,60,0" concept="7" trace="target$$6wD" />
+      <node id="8475187935300100666" at="60,0,61,0" concept="7" trace="incomingTransitions$AQUW" />
+      <node id="8475187935300100666" at="61,0,62,0" concept="7" trace="transition$AWMO" />
+      <node id="8475187935300100666" at="22,0,25,0" concept="0" trace="Transition_Constraints#()V" />
+      <node id="103087747853920836" at="37,0,40,0" concept="2" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="103087747853776422" at="29,0,33,0" concept="2" trace="validate#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="103087747853777113" at="35,63,40,11" concept="1" />
+      <node id="103087747853776422" at="33,0,48,0" concept="2" trace="onReferenceSet#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="103087747853776422" at="27,90,48,6" concept="3" />
+      <node id="8475187935300100666" at="26,0,53,0" concept="2" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="8475187935300100666" at="22,35,23,34" />
+      <scope id="103087747853776422" at="30,116,31,20" />
+      <scope id="103087747853920837" at="37,43,38,103" />
+      <scope id="8475187935300100666" at="22,0,25,0" />
+      <scope id="103087747853920836" at="37,0,40,0">
+        <var name="it" id="103087747853920836" />
+      </scope>
+      <scope id="103087747853776422" at="29,0,33,0">
+        <var name="newReferentNode" id="103087747853776422" />
+        <var name="oldReferentNode" id="103087747853776422" />
+        <var name="referenceNode" id="103087747853776422" />
+      </scope>
+      <scope id="103087747853777053" at="34,119,46,85">
+        <var name="newRef" id="103087747853986979" />
+      </scope>
+      <scope id="103087747853776422" at="33,0,48,0">
+        <var name="newReferentNode" id="103087747853776422" />
+        <var name="oldReferentNode" id="103087747853776422" />
+        <var name="referenceNode" id="103087747853776422" />
+      </scope>
+      <scope id="8475187935300100666" at="27,90,51,22">
+        <var name="d0" id="103087747853776422" />
+        <var name="references" id="8475187935300100666" />
+      </scope>
+      <scope id="8475187935300100666" at="26,0,53,0" />
+      <unit id="8475187935300100666" at="54,0,57,0" name="naomod.fsm.constraints.Transition_Constraints$CONCEPTS" />
+      <unit id="103087747853920836" at="36,124,40,9" name="naomod.fsm.constraints.Transition_Constraints$1$1" />
+      <unit id="8475187935300100666" at="58,0,63,0" name="naomod.fsm.constraints.Transition_Constraints$LINKS" />
+      <unit id="103087747853776422" at="28,48,48,5" name="naomod.fsm.constraints.Transition_Constraints$1" />
+      <unit id="8475187935300100666" at="21,0,64,0" name="naomod.fsm.constraints.Transition_Constraints" />
+    </file>
+  </root>
+</debug-info>
+
