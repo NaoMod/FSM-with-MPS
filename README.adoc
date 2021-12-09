@@ -2,7 +2,7 @@
 
 # FSM with MPS
 
-This implementation shows an implementation of a Domain Specific Language for Finite State Machines with the language workbench MPS.
+This project shows an implementation of a Domain Specific Language for Finite State Machines with the language workbench MPS.
 
 ## Using the DSL
 
@@ -44,3 +44,11 @@ The behavior aspect describes operationnal semantics for the State concept, as w
 
 * At the initialisation of the FSM, a StateReference is already contained in _finalStates_ but it doesn't reference any state (as none exist yet).
 * Deleting a state will not remove the references if it was final or initial.
+
+## References
+
+* https://www.jetbrains.com/help/mps/mps-user-s-guide.html
+* https://mps.rocks/
+* Voelter, M., Benz, S., Dietrich, C., Engelmann, B., Helander, M., Kats, L. C. L., Visser, E., & Wachsmuth, G. (2013). DSL Engineering—Designing, Implementing and Using Domain-Specific Languages. dslbook.org.
+* Voelter, M. (2013). Language and IDE Modularization and Composition with MPS. In R. Lämmel, J. Saraiva, & J. Visser (Éds.), Generative and Transformational Techniques in Software Engineering IV: International Summer School, GTTSE 2011, Braga, Portugal, July 3-9, 2011. Revised Papers (p. 383‑430). Springer. https://doi.org/10.1007/978-3-642-35992-7_11
+
