@@ -6,9 +6,9 @@ import jetbrains.mps.editor.runtime.cells.AbstractCellAction;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.editor.runtime.deletionApprover.DeletionApproverUtil;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import java.util.Objects;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
@@ -29,13 +29,35 @@ public class StateConcept_Actions {
       }
       public void execute_internal(EditorContext editorContext, final SNode node) {
         if (DeletionApproverUtil.approve(editorContext, node, "stateCell")) {
-          ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.as(SNodeOperations.getParent(node), CONCEPTS.FSM$3f), LINKS.finalStates$BaBL)).removeWhere(new IWhereFilter<SNode>() {
+          return;
+        }
+        SNode fsm = SNodeOperations.as(SNodeOperations.getParent(node), CONCEPTS.FSM$3f);
+
+        for (SNode state : ListSequence.fromList(SLinkOperations.getChildren(fsm, LINKS.ownedStates$$8mP))) {
+          ListSequence.fromList(SLinkOperations.getChildren(state, LINKS.incomingTransitions$AQUW)).removeWhere(new IWhereFilter<SNode>() {
             public boolean accept(SNode it) {
-              return Objects.equals(SLinkOperations.getTarget(it, LINKS.state$Bb$k), node);
+              return Objects.equals(SNodeOperations.getParent(SLinkOperations.getTarget(it, LINKS.transition$AWMO)), node);
             }
           });
-          SLinkOperations.setTarget(SNodeOperations.as(SNodeOperations.getParent(node), CONCEPTS.FSM$3f), LINKS.initialState$AC8u, null);
+          ListSequence.fromList(SLinkOperations.getChildren(state, LINKS.outgoingTransitions$AIHp)).removeWhere(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return Objects.equals(SLinkOperations.getTarget(it, LINKS.target$$6wD), node);
+            }
+          });
         }
+
+        SNode initialState = SLinkOperations.getTarget(fsm, LINKS.initialState$AC8u);
+        if (Objects.equals(initialState, node)) {
+          SLinkOperations.setTarget(fsm, LINKS.initialState$AC8u, null);
+        }
+
+        ListSequence.fromList(SLinkOperations.getChildren(fsm, LINKS.finalStates$BaBL)).removeWhere(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return Objects.equals(SLinkOperations.getTarget(it, LINKS.state$Bb$k), node);
+          }
+        });
+        ListSequence.fromList(SLinkOperations.getChildren(fsm, LINKS.ownedStates$$8mP)).removeElement(node);
+
       }
 
     };
@@ -87,8 +109,13 @@ public class StateConcept_Actions {
   }
 
   private static final class LINKS {
+    /*package*/ static final SContainmentLink incomingTransitions$AQUW = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b99L, 0x759dea86103a0bd9L, "incomingTransitions");
+    /*package*/ static final SReferenceLink transition$AWMO = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0bd6L, 0x759dea86103a0bd7L, "transition");
+    /*package*/ static final SContainmentLink outgoingTransitions$AIHp = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b99L, 0x759dea86103a0bcbL, "outgoingTransitions");
+    /*package*/ static final SReferenceLink target$$6wD = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0ba6L, 0x759dea86103a0bb2L, "target");
+    /*package*/ static final SContainmentLink ownedStates$$8mP = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, 0x759dea86103a0bbbL, "ownedStates");
+    /*package*/ static final SReferenceLink initialState$AC8u = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, 0x759dea86103a0bc4L, "initialState");
     /*package*/ static final SContainmentLink finalStates$BaBL = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, 0x759dea86103a0beeL, "finalStates");
     /*package*/ static final SReferenceLink state$Bb$k = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0be9L, 0x759dea86103a0beaL, "state");
-    /*package*/ static final SReferenceLink initialState$AC8u = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, 0x759dea86103a0bc4L, "initialState");
   }
 }

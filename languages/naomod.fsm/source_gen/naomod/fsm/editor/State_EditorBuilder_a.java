@@ -92,7 +92,6 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
     editorCell.setCellId("stateCell");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    StateConcept_Actions.setCellActions(editorCell, myNode, getEditorContext());
     if (nodeCondition_sjqidp_a0a()) {
       editorCell.addEditorCell(createConstant_0());
     }

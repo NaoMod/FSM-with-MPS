@@ -36,6 +36,7 @@ public class StateConcept_Final_Actions {
             return Objects.equals(SLinkOperations.getTarget(it, LINKS.state$Bb$k), node);
           }
         });
+
       }
 
     };

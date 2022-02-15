@@ -29,6 +29,7 @@ public class StateConcept_Initial_Actions {
           return;
         }
         SLinkOperations.setTarget(SNodeOperations.as(SNodeOperations.getParent(node), CONCEPTS.FSM$3f), LINKS.initialState$AC8u, null);
+
       }
 
     };

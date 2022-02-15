@@ -42,8 +42,7 @@ The behavior aspect describes operationnal semantics for the State concept, as w
 
 ## Known Issues
 
-* At the initialisation of the FSM, a StateReference is already contained in _finalStates_ but it doesn't reference any state (as none exist yet).
-* Deleting a state will not remove the references if it was final or initial.
+* States can be referenced in other FSMs.
 
 ## References
 
