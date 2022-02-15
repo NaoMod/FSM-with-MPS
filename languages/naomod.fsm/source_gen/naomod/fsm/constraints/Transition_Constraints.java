@@ -14,6 +14,15 @@ import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import java.util.Objects;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.annotations.Nullable;
+import jetbrains.mps.smodel.runtime.ReferenceScopeProvider;
+import jetbrains.mps.smodel.runtime.base.BaseScopeProvider;
+import org.jetbrains.mps.openapi.model.SNodeReference;
+import jetbrains.mps.smodel.SNodePointer;
+import jetbrains.mps.scope.Scope;
+import jetbrains.mps.smodel.runtime.ReferenceConstraintsContext;
+import jetbrains.mps.scope.SimpleRoleScope;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.HashMap;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -25,7 +34,7 @@ public class Transition_Constraints extends BaseConstraintsDescriptor {
 
   @Override
   protected Map<SReferenceLink, ReferenceConstraintsDescriptor> getSpecifiedReferences() {
-    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.target$$6wD, this, false, true) {
+    BaseReferenceConstraintsDescriptor d0 = new BaseReferenceConstraintsDescriptor(LINKS.target$$6wD, this, true, true) {
       @Override
       public boolean validate(final SNode referenceNode, final SNode oldReferentNode, final SNode newReferentNode) {
         return true;
@@ -45,6 +54,20 @@ public class Transition_Constraints extends BaseConstraintsDescriptor {
 
         SLinkOperations.setTarget(referenceNode, LINKS.target$$6wD, newReferentNode);
       }
+      @Nullable
+      @Override
+      public ReferenceScopeProvider getScopeProvider() {
+        return new BaseScopeProvider() {
+          @Override
+          public SNodeReference getSearchScopeValidatorNode() {
+            return new SNodePointer("r:9485bbbe-5370-4b6f-8cd0-b06ef68fe9d2(naomod.fsm.constraints)", "7555544122146420816");
+          }
+          @Override
+          public Scope createScope(final ReferenceConstraintsContext _context) {
+            return SimpleRoleScope.forNamedElements(SNodeOperations.getNodeAncestor(_context.getContextNode(), CONCEPTS.FSM$3f, false, false), LINKS.ownedStates$$8mP);
+          }
+        };
+      }
     };
     Map<SReferenceLink, ReferenceConstraintsDescriptor> references = new HashMap<SReferenceLink, ReferenceConstraintsDescriptor>();
     references.put(d0.getReference(), d0);
@@ -53,11 +76,13 @@ public class Transition_Constraints extends BaseConstraintsDescriptor {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Transition$kc = MetaAdapterFactory.getConcept(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0ba6L, "naomod.fsm.structure.Transition");
+    /*package*/ static final SConcept FSM$3f = MetaAdapterFactory.getConcept(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, "naomod.fsm.structure.FSM");
   }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink target$$6wD = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0ba6L, 0x759dea86103a0bb2L, "target");
     /*package*/ static final SContainmentLink incomingTransitions$AQUW = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b99L, 0x759dea86103a0bd9L, "incomingTransitions");
     /*package*/ static final SReferenceLink transition$AWMO = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0bd6L, 0x759dea86103a0bd7L, "transition");
+    /*package*/ static final SContainmentLink ownedStates$$8mP = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, 0x759dea86103a0bbbL, "ownedStates");
   }
 }
