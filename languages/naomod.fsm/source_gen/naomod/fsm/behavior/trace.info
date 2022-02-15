@@ -15,49 +15,228 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,32,0" name="naomod.fsm.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,35,0" name="naomod.fsm.behavior.BehaviorAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:3d88fa52-25b4-4255-9afa-3677d8d08511(naomod.fsm.behavior)/4970230749992989315">
+    <file name="StepResult.java">
+      <node id="4970230749993000852" at="8,0,9,0" concept="3" trace="isPossible" />
+      <node id="4970230749992990776" at="9,0,10,0" concept="3" trace="output" />
+      <node id="4970230749992998008" at="10,0,11,0" concept="3" trace="currentState" />
+      <node id="4970230749993517619" at="12,41,13,33" concept="2" />
+      <node id="4970230749993002484" at="16,76,17,33" concept="2" />
+      <node id="4970230749993002496" at="17,33,18,25" concept="2" />
+      <node id="4970230749993002508" at="18,25,19,37" concept="2" />
+      <node id="4970230749993001735" at="22,31,23,27" concept="7" />
+      <node id="4970230749993001743" at="25,29,26,23" concept="7" />
+      <node id="4970230749993001751" at="28,34,29,29" concept="7" />
+      <node id="4970230749993517611" at="12,0,15,0" concept="1" trace="StepResult#(Z)V" />
+      <node id="4970230749993001731" at="22,0,25,0" concept="5" trace="isPossible#()Z" />
+      <node id="4970230749993001739" at="25,0,28,0" concept="5" trace="getOutput#()Ljava/lang/String;" />
+      <node id="4970230749993001747" at="28,0,31,0" concept="5" trace="getCurrentState#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="4970230749993002476" at="16,0,21,0" concept="1" trace="StepResult#(ZLjava/lang/String;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="4970230749993517615" at="12,41,13,33" />
+      <scope id="4970230749993001734" at="22,31,23,27" />
+      <scope id="4970230749993001742" at="25,29,26,23" />
+      <scope id="4970230749993001750" at="28,34,29,29" />
+      <scope id="4970230749993517611" at="12,0,15,0">
+        <var name="isPossible" id="4970230749993517618" />
+      </scope>
+      <scope id="4970230749993002480" at="16,76,19,37" />
+      <scope id="4970230749993001731" at="22,0,25,0" />
+      <scope id="4970230749993001739" at="25,0,28,0" />
+      <scope id="4970230749993001747" at="28,0,31,0" />
+      <scope id="4970230749993002476" at="16,0,21,0">
+        <var name="currentState" id="4970230749993002507" />
+        <var name="isPossible" id="4970230749993002483" />
+        <var name="output" id="4970230749993002495" />
+      </scope>
+      <unit id="4970230749992989315" at="7,0,32,0" name="naomod.fsm.behavior.StepResult" />
+    </file>
+  </root>
+  <root nodeRef="r:3d88fa52-25b4-4255-9afa-3677d8d08511(naomod.fsm.behavior)/4970230749993625582">
+    <file name="Transition__BehaviorDescriptor.java">
+      <node id="4970230749993625582" at="27,0,28,0" concept="9" trace="CONCEPT" />
+      <node id="4970230749993625582" at="29,0,30,0" concept="9" trace="computeStep_id4jTNCyx5YvT" />
+      <node id="4970230749993625582" at="31,0,32,0" concept="9" trace="BH_METHODS" />
+      <node id="4970230749993632025" at="36,108,37,73" concept="6" />
+      <node id="4970230749993635941" at="39,25,40,168" concept="2" />
+      <node id="4970230749993632307" at="42,7,43,24" concept="7" />
+      <node id="4970230749993625582" at="50,114,51,21" concept="2" />
+      <node id="4970230749993625582" at="55,114,56,49" concept="6" />
+      <node id="4970230749993625582" at="57,26,58,56" concept="12" />
+      <node id="4970230749993625582" at="61,13,62,90" concept="7" />
+      <node id="4970230749993625582" at="63,14,64,58" concept="12" />
+      <node id="4970230749993625582" at="69,128,70,49" concept="6" />
+      <node id="4970230749993625582" at="71,26,72,56" concept="12" />
+      <node id="4970230749993625582" at="75,14,76,58" concept="12" />
+      <node id="4970230749993625582" at="82,48,83,22" concept="7" />
+      <node id="4970230749993625582" at="88,40,89,19" concept="7" />
+      <node id="4970230749993625582" at="93,0,94,0" concept="9" trace="output$$0qf" />
+      <node id="4970230749993625582" at="97,0,98,0" concept="9" trace="target$$6wD" />
+      <node id="4970230749993625582" at="33,0,35,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4970230749993625582" at="46,0,48,0" concept="1" trace="Transition__BehaviorDescriptor#()V" />
+      <node id="4970230749993632406" at="39,0,42,0" concept="5" trace="run#()V" />
+      <node id="4970230749993625582" at="56,49,59,5" concept="4" />
+      <node id="4970230749993625582" at="70,49,73,5" concept="4" />
+      <node id="4970230749993625582" at="49,0,53,0" concept="5" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="4970230749993625582" at="73,5,77,5" concept="11" />
+      <node id="4970230749993632404" at="37,73,42,7" concept="2" />
+      <node id="4970230749993625582" at="80,0,85,0" concept="5" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="4970230749993625582" at="86,0,91,0" concept="5" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="4970230749993625582" at="59,5,65,5" concept="11" />
+      <node id="4970230749993625582" at="36,0,45,0" concept="10" trace="computeStep_id4jTNCyx5YvT#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lnaomod/fsm/behavior/StepResult;" />
+      <node id="4970230749993625582" at="68,0,79,0" concept="5" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="4970230749993625582" at="54,0,67,0" concept="5" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="4970230749993625582" at="33,63,33,63" />
+      <scope id="4970230749993625582" at="46,48,46,48" />
+      <scope id="4970230749993632408" at="39,25,40,168" />
+      <scope id="4970230749993625582" at="50,114,51,21" />
+      <scope id="4970230749993625582" at="57,26,58,56" />
+      <scope id="4970230749993625582" at="61,13,62,90" />
+      <scope id="4970230749993625582" at="63,14,64,58" />
+      <scope id="4970230749993625582" at="71,26,72,56" />
+      <scope id="4970230749993625582" at="75,14,76,58" />
+      <scope id="4970230749993625582" at="82,48,83,22" />
+      <scope id="4970230749993625582" at="88,40,89,19" />
+      <scope id="4970230749993625582" at="33,0,35,0">
+        <var name="__thisNode__" id="4970230749993625582" />
+      </scope>
+      <scope id="4970230749993625582" at="46,0,48,0" />
+      <scope id="4970230749993632406" at="39,0,42,0" />
+      <scope id="4970230749993625582" at="49,0,53,0">
+        <var name="constructor" id="4970230749993625582" />
+        <var name="node" id="4970230749993625582" />
+        <var name="parameters" id="4970230749993625582" />
+      </scope>
+      <scope id="4970230749993625582" at="80,0,85,0" />
+      <scope id="4970230749993625582" at="86,0,91,0" />
+      <scope id="4970230749993625596" at="36,108,43,24">
+        <var name="result" id="4970230749993632026" />
+      </scope>
+      <scope id="4970230749993625582" at="69,128,77,5">
+        <var name="methodIndex" id="4970230749993625582" />
+      </scope>
+      <scope id="4970230749993625582" at="36,0,45,0">
+        <var name="__thisNode__" id="4970230749993625582" />
+        <var name="input" id="4970230749993625645" />
+      </scope>
+      <scope id="4970230749993625582" at="55,114,65,5">
+        <var name="methodIndex" id="4970230749993625582" />
+      </scope>
+      <scope id="4970230749993625582" at="68,0,79,0">
+        <var name="concept" id="4970230749993625582" />
+        <var name="method" id="4970230749993625582" />
+        <var name="parameters" id="4970230749993625582" />
+      </scope>
+      <scope id="4970230749993625582" at="54,0,67,0">
+        <var name="method" id="4970230749993625582" />
+        <var name="node" id="4970230749993625582" />
+        <var name="parameters" id="4970230749993625582" />
+      </scope>
+      <unit id="4970230749993625582" at="92,0,95,0" name="naomod.fsm.behavior.Transition__BehaviorDescriptor$PROPS" />
+      <unit id="4970230749993625582" at="96,0,99,0" name="naomod.fsm.behavior.Transition__BehaviorDescriptor$LINKS" />
+      <unit id="4970230749993632406" at="38,94,42,5" name="naomod.fsm.behavior.Transition__BehaviorDescriptor$1" />
+      <unit id="4970230749993625582" at="26,0,100,0" name="naomod.fsm.behavior.Transition__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:3d88fa52-25b4-4255-9afa-3677d8d08511(naomod.fsm.behavior)/6302603287856782787">
     <file name="UI.java">
-      <node id="6302603287857047554" at="15,0,16,0" concept="3" trace="interpreter" />
-      <node id="6302603287857219342" at="16,0,17,0" concept="3" trace="fsmName" />
-      <node id="6302603287856878153" at="17,0,18,0" concept="3" trace="inputField" />
-      <node id="6302603287856895690" at="18,0,19,0" concept="3" trace="outputField" />
-      <node id="662873435780671430" at="19,0,20,0" concept="3" trace="button" />
-      <node id="6302603287857051191" at="21,57,22,35" concept="2" />
-      <node id="6302603287857227642" at="22,35,23,27" concept="2" />
-      <node id="6302603287857211537" at="27,21,28,22" concept="2" />
-      <node id="6302603287857211540" at="28,22,29,36" concept="2" />
-      <node id="6302603287857211546" at="29,36,30,29" concept="2" />
-      <node id="6302603287857211551" at="30,29,31,20" concept="2" />
-      <node id="662873435780623770" at="31,20,32,30" concept="2" />
-      <node id="2735176500087794541" at="32,30,33,35" concept="2" />
-      <node id="6302603287857211554" at="33,35,34,21" concept="2" />
-      <node id="662873435780773512" at="37,51,38,75" concept="2" />
-      <node id="7711653544685516660" at="38,75,39,31" concept="2" />
-      <node id="662873435780659500" at="41,7,42,16" concept="2" />
-      <node id="6302603287857211557" at="42,16,43,0" concept="8" />
-      <node id="6302603287857211558" at="43,0,44,44" concept="2" />
-      <node id="6302603287857211564" at="44,44,45,11" concept="2" />
-      <node id="6302603287857211566" at="45,11,46,21" concept="2" />
-      <node id="6302603287856784126" at="21,0,25,0" concept="1" trace="UI#(Lnaomod/fsm/behavior/FSMInterpreter;Ljava/lang/String;)V" />
-      <node id="662873435780733976" at="36,0,41,0" concept="5" trace="actionPerformed#(Ljava/awt/event/ActionEvent;)V" />
-      <node id="662873435780693745" at="34,21,41,7" concept="2" />
-      <node id="6302603287857208873" at="26,0,48,0" concept="5" trace="run#()V" />
-      <scope id="6302603287856784130" at="21,57,23,27" />
-      <scope id="662873435780733982" at="37,51,39,31" />
-      <scope id="6302603287856784126" at="21,0,25,0">
+      <node id="6302603287857047554" at="20,0,21,0" concept="3" trace="interpreter" />
+      <node id="6302603287857219342" at="21,0,22,0" concept="3" trace="fsmName" />
+      <node id="6302603287856878153" at="22,0,23,0" concept="3" trace="inputField" />
+      <node id="6302603287856895690" at="23,0,24,0" concept="3" trace="outputField" />
+      <node id="4970230749994107651" at="24,0,25,0" concept="3" trace="currentStateField" />
+      <node id="4970230749994151972" at="25,0,26,0" concept="3" trace="resultField" />
+      <node id="662873435780671430" at="26,0,27,0" concept="3" trace="computeButton" />
+      <node id="4970230749993848455" at="27,0,28,0" concept="3" trace="endButton" />
+      <node id="6302603287857051191" at="29,57,30,35" concept="2" />
+      <node id="6302603287857227642" at="30,35,31,27" concept="2" />
+      <node id="6302603287857211537" at="35,21,36,22" concept="2" />
+      <node id="6302603287857211540" at="36,22,37,36" concept="2" />
+      <node id="6302603287857211546" at="37,36,38,29" concept="2" />
+      <node id="6302603287857211551" at="38,29,39,20" concept="2" />
+      <node id="4970230749994284696" at="39,20,40,0" concept="8" />
+      <node id="4970230749994188544" at="40,0,41,37" concept="2" />
+      <node id="4970230749994188549" at="41,37,42,41" concept="2" />
+      <node id="2629166348373237123" at="42,41,43,64" concept="2" />
+      <node id="4970230749994188554" at="43,64,44,27" concept="2" />
+      <node id="4970230749994196062" at="44,27,45,0" concept="8" />
+      <node id="662873435780623770" at="45,0,46,30" concept="2" />
+      <node id="2735176500087794541" at="46,30,47,35" concept="2" />
+      <node id="6302603287857211554" at="47,35,48,21" concept="2" />
+      <node id="4970230749994205631" at="48,21,49,0" concept="8" />
+      <node id="4970230749994292072" at="49,0,50,42" concept="2" />
+      <node id="4970230749994292077" at="50,42,51,35" concept="2" />
+      <node id="4970230749994292082" at="51,35,52,21" concept="2" />
+      <node id="4970230749993794669" at="52,21,53,0" concept="8" />
+      <node id="4970230749995345805" at="56,51,57,44" concept="6" />
+      <node id="4970230749993913031" at="57,44,58,59" concept="6" />
+      <node id="4970230749994642539" at="59,34,60,62" concept="6" />
+      <node id="4970230749994516045" at="62,31,63,102" concept="2" />
+      <node id="4970230749994857928" at="65,13,66,0" concept="8" />
+      <node id="4970230749994415560" at="66,0,67,50" concept="2" />
+      <node id="4970230749995168062" at="68,16,69,100" concept="2" />
+      <node id="4970230749995503835" at="69,100,70,42" concept="2" />
+      <node id="4970230749995597386" at="70,42,71,38" concept="2" />
+      <node id="4970230749994394536" at="72,9,73,0" concept="8" />
+      <node id="7711653544685516660" at="73,0,74,31" concept="2" />
+      <node id="662873435780659500" at="76,7,77,23" concept="2" />
+      <node id="4970230749995681900" at="77,23,78,0" concept="8" />
+      <node id="4970230749996047381" at="82,44,83,56" concept="2" />
+      <node id="4970230749996161946" at="84,16,85,84" concept="2" />
+      <node id="4970230749996031865" at="86,9,87,0" concept="8" />
+      <node id="4970230749996034636" at="87,0,88,40" concept="2" />
+      <node id="4970230749996034641" at="88,40,89,36" concept="2" />
+      <node id="4970230749996034628" at="89,36,90,0" concept="8" />
+      <node id="4970230749995918260" at="92,7,93,19" concept="2" />
+      <node id="6302603287857211557" at="93,19,94,0" concept="8" />
+      <node id="6302603287857211564" at="94,0,95,11" concept="2" />
+      <node id="6302603287857211566" at="95,11,96,21" concept="2" />
+      <node id="6302603287856782787" at="100,0,101,0" concept="9" trace="name$MnvL" />
+      <node id="4970230749996151271" at="84,14,86,9" concept="0" />
+      <node id="4970230749994613210" at="62,0,65,0" concept="5" trace="run#()V" />
+      <node id="6302603287856784126" at="29,0,33,0" concept="1" trace="UI#(Lnaomod/fsm/behavior/FSMInterpreter;Ljava/lang/String;)V" />
+      <node id="4970230749994101764" at="68,14,72,9" concept="0" />
+      <node id="4970230749994613208" at="60,62,65,13" concept="2" />
+      <node id="4970230749995965981" at="81,51,86,9" concept="4" />
+      <node id="4970230749995884404" at="80,0,92,0" concept="5" trace="actionPerformed#(Ljava/awt/event/ActionEvent;)V" />
+      <node id="4970230749994057929" at="58,59,72,9" concept="4" />
+      <node id="4970230749995705188" at="78,0,92,7" concept="2" />
+      <node id="662873435780733976" at="55,0,76,0" concept="5" trace="actionPerformed#(Ljava/awt/event/ActionEvent;)V" />
+      <node id="662873435780693745" at="53,0,76,7" concept="2" />
+      <node id="6302603287857208873" at="34,0,98,0" concept="5" trace="run#()V" />
+      <scope id="4970230749994613212" at="62,31,63,102" />
+      <scope id="4970230749995965983" at="82,44,83,56" />
+      <scope id="4970230749996151272" at="84,16,85,84" />
+      <scope id="6302603287856784130" at="29,57,31,27" />
+      <scope id="4970230749994613210" at="62,0,65,0" />
+      <scope id="4970230749994101765" at="68,16,71,38" />
+      <scope id="6302603287856784126" at="29,0,33,0">
         <var name="fsmName" id="6302603287856790246" />
         <var name="interpreter" id="6302603287857035650" />
       </scope>
-      <scope id="662873435780733976" at="36,0,41,0">
+      <scope id="4970230749994057931" at="59,34,67,50">
+        <var name="currentState" id="4970230749994642542" />
+      </scope>
+      <scope id="4970230749995884410" at="81,51,90,0" />
+      <scope id="4970230749995884404" at="80,0,92,0">
+        <var name="p1" id="4970230749995884408" />
+      </scope>
+      <scope id="662873435780733982" at="56,51,74,31">
+        <var name="input" id="4970230749995345806" />
+        <var name="result" id="4970230749993913032" />
+      </scope>
+      <scope id="662873435780733976" at="55,0,76,0">
         <var name="p1" id="662873435780733980" />
       </scope>
-      <scope id="6302603287857208882" at="27,21,46,21" />
-      <scope id="6302603287857208873" at="26,0,48,0" />
-      <unit id="662873435780733970" at="35,33,41,5" name="naomod.fsm.behavior.UI$1" />
-      <unit id="6302603287856782787" at="13,0,49,0" name="naomod.fsm.behavior.UI" />
+      <scope id="6302603287857208882" at="35,21,96,21" />
+      <scope id="6302603287857208873" at="34,0,98,0" />
+      <unit id="6302603287856782787" at="99,0,102,0" name="naomod.fsm.behavior.UI$PROPS" />
+      <unit id="4970230749994613210" at="61,100,65,11" name="naomod.fsm.behavior.UI$1$1" />
+      <unit id="4970230749995884389" at="79,36,92,5" name="naomod.fsm.behavior.UI$2" />
+      <unit id="662873435780733970" at="54,40,76,5" name="naomod.fsm.behavior.UI$1" />
+      <unit id="6302603287856782787" at="18,0,103,0" name="naomod.fsm.behavior.UI" />
     </file>
   </root>
   <root nodeRef="r:3d88fa52-25b4-4255-9afa-3677d8d08511(naomod.fsm.behavior)/8475187935300286975">
@@ -89,169 +268,174 @@
       <node id="8475187935300311648" at="22,0,23,0" concept="3" trace="context" />
       <node id="8475187935300313671" at="24,45,25,27" concept="2" />
       <node id="6302603287857201103" at="27,26,28,192" concept="2" />
-      <node id="8475187935300442619" at="31,55,32,0" concept="8" />
-      <node id="662873435780567931" at="34,30,35,39" concept="7" />
-      <node id="662873435780576011" at="36,14,37,36" concept="7" />
-      <node id="1402874804434766150" at="39,5,40,0" concept="8" />
-      <node id="1402874804434817856" at="40,0,41,71" concept="6" />
-      <node id="1402874804434766218" at="41,71,42,0" concept="8" />
-      <node id="1402874804434804288" at="44,25,45,155" concept="6" />
-      <node id="1402874804434821585" at="45,155,46,0" concept="8" />
-      <node id="1402874804434836665" at="47,47,48,101" concept="2" />
-      <node id="1402874804434851009" at="48,101,49,101" concept="2" />
-      <node id="1402874804434878370" at="50,16,51,123" concept="2" />
-      <node id="1402874804434886600" at="54,7,55,0" concept="8" />
-      <node id="1402874804434890079" at="55,0,56,30" concept="7" />
-      <node id="8475187935300490775" at="59,37,60,67" concept="6" />
-      <node id="1402874804434893324" at="60,67,61,0" concept="8" />
-      <node id="8475187935300535718" at="66,109,67,35" concept="2" />
-      <node id="1402874804434914845" at="72,7,73,0" concept="8" />
-      <node id="662873435780525900" at="73,0,74,25" concept="7" />
-      <node id="8475187935300311540" at="78,0,79,0" concept="9" trace="FSM$3f" />
-      <node id="8475187935300311540" at="82,0,83,0" concept="9" trace="name$MnvL" />
-      <node id="8475187935300311540" at="83,0,84,0" concept="9" trace="output$$0qf" />
-      <node id="8475187935300311540" at="87,0,88,0" concept="9" trace="target$$6wD" />
-      <node id="8475187935300311540" at="88,0,89,0" concept="9" trace="finalStates$BaBL" />
-      <node id="8475187935300311540" at="89,0,90,0" concept="9" trace="state$Bb$k" />
-      <node id="662873435780560501" at="36,12,38,7" concept="0" />
-      <node id="1402874804434875662" at="50,14,52,9" concept="0" />
+      <node id="4970230749993572813" at="31,47,32,117" concept="6" />
+      <node id="4970230749993604148" at="33,30,34,56" concept="2" />
+      <node id="1402874804434890079" at="35,5,36,18" concept="7" />
+      <node id="8475187935300490775" at="39,36,40,67" concept="6" />
+      <node id="1402874804434893324" at="40,67,41,0" concept="8" />
+      <node id="8475187935300535718" at="46,109,47,35" concept="2" />
+      <node id="1402874804434914845" at="52,7,53,0" concept="8" />
+      <node id="662873435780525900" at="53,0,54,25" concept="7" />
+      <node id="2629166348373352483" at="57,38,58,75" concept="6" />
+      <node id="2629166348373332094" at="60,25,61,107" concept="2" />
+      <node id="2629166348373364518" at="63,7,64,34" concept="7" />
+      <node id="8475187935300311540" at="68,0,69,0" concept="9" trace="FSM$3f" />
+      <node id="8475187935300311540" at="72,0,73,0" concept="9" trace="name$MnvL" />
+      <node id="8475187935300311540" at="76,0,77,0" concept="9" trace="finalStates$BaBL" />
+      <node id="8475187935300311540" at="77,0,78,0" concept="9" trace="state$Bb$k" />
       <node id="8475187935300311703" at="24,0,27,0" concept="1" trace="FSMInterpreter#(Lnaomod/fsm/behavior/FSMContext;)V" />
       <node id="6302603287857144543" at="27,0,30,0" concept="5" trace="launchUI#()V" />
-      <node id="8475187935300524474" at="65,39,68,13" concept="4" />
-      <node id="662873435780560493" at="33,33,38,7" concept="4" />
-      <node id="8475187935300523753" at="65,0,70,0" concept="5" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="1402874804434824916" at="46,0,52,9" concept="4" />
-      <node id="8475187935300443910" at="32,0,39,5" concept="4" />
-      <node id="8475187935300498511" at="63,25,70,11" concept="2" />
-      <node id="1402874804434897174" at="63,0,72,0" concept="5" trace="run#()V" />
-      <node id="1402874804434750269" at="44,0,54,0" concept="5" trace="run#()V" />
-      <node id="1402874804434897172" at="61,0,72,7" concept="2" />
-      <node id="1402874804434750267" at="42,0,54,7" concept="2" />
-      <node id="8475187935300451825" at="59,0,76,0" concept="5" trace="checkFinalState#()Z" />
-      <node id="8475187935300319308" at="31,0,58,0" concept="5" trace="computeStep#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="4970230749993594032" at="32,117,35,5" concept="4" />
+      <node id="8475187935300524474" at="45,39,48,13" concept="4" />
+      <node id="2629166348373332092" at="60,0,63,0" concept="5" trace="run#()V" />
+      <node id="8475187935300523753" at="45,0,50,0" concept="5" trace="visit#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2629166348373332091" at="58,75,63,7" concept="2" />
+      <node id="8475187935300319308" at="31,0,38,0" concept="5" trace="computeStep#(Ljava/lang/String;)Lnaomod/fsm/behavior/StepResult;" />
+      <node id="8475187935300498511" at="43,25,50,11" concept="2" />
+      <node id="1402874804434897174" at="43,0,52,0" concept="5" trace="run#()V" />
+      <node id="2629166348373309251" at="57,0,66,0" concept="5" trace="getInitalStateName#()Ljava/lang/String;" />
+      <node id="1402874804434897172" at="41,0,52,7" concept="2" />
+      <node id="8475187935300451825" at="39,0,56,0" concept="5" trace="checkFinalState#()Z" />
       <scope id="8475187935300311707" at="24,45,25,27" />
       <scope id="6302603287857144546" at="27,26,28,192" />
-      <scope id="662873435780560494" at="34,30,35,39" />
-      <scope id="662873435780560502" at="36,14,37,36" />
-      <scope id="1402874804434875663" at="50,16,51,123" />
-      <scope id="8475187935300524476" at="66,109,67,35" />
-      <scope id="1402874804434824918" at="47,47,49,101" />
+      <scope id="4970230749993594034" at="33,30,34,56" />
+      <scope id="8475187935300524476" at="46,109,47,35" />
+      <scope id="2629166348373332093" at="60,25,61,107" />
       <scope id="8475187935300311703" at="24,0,27,0">
         <var name="context" id="8475187935300313391" />
       </scope>
       <scope id="6302603287857144543" at="27,0,30,0" />
-      <scope id="8475187935300523754" at="65,39,68,13" />
-      <scope id="8475187935300443912" at="33,33,38,7" />
-      <scope id="8475187935300523753" at="65,0,70,0">
+      <scope id="8475187935300523754" at="45,39,48,13" />
+      <scope id="2629166348373332092" at="60,0,63,0" />
+      <scope id="8475187935300319312" at="31,47,36,18">
+        <var name="result" id="4970230749993572814" />
+      </scope>
+      <scope id="8475187935300523753" at="45,0,50,0">
         <var name="it" id="8475187935300523753" />
       </scope>
-      <scope id="1402874804434897176" at="63,25,70,11" />
-      <scope id="1402874804434750271" at="44,25,52,9">
-        <var name="candidateTransition" id="1402874804434804289" />
+      <scope id="8475187935300319308" at="31,0,38,0">
+        <var name="input" id="6302603287857149510" />
       </scope>
-      <scope id="1402874804434897174" at="63,0,72,0" />
-      <scope id="1402874804434750269" at="44,0,54,0" />
-      <scope id="8475187935300451829" at="59,37,74,25">
+      <scope id="1402874804434897176" at="43,25,50,11" />
+      <scope id="2629166348373309254" at="57,38,64,34">
+        <var name="initialStateName" id="2629166348373352484" />
+      </scope>
+      <scope id="1402874804434897174" at="43,0,52,0" />
+      <scope id="2629166348373309251" at="57,0,66,0" />
+      <scope id="8475187935300451829" at="39,36,54,25">
         <var name="isFinal" id="8475187935300490778" />
       </scope>
-      <scope id="8475187935300451825" at="59,0,76,0" />
-      <scope id="8475187935300319312" at="31,55,56,30">
-        <var name="outputString" id="1402874804434817857" />
-      </scope>
-      <scope id="8475187935300319308" at="31,0,58,0">
-        <var name="inputString" id="6302603287857149510" />
-      </scope>
-      <unit id="8475187935300311540" at="77,0,80,0" name="naomod.fsm.behavior.FSMInterpreter$CONCEPTS" />
-      <unit id="8475187935300311540" at="81,0,85,0" name="naomod.fsm.behavior.FSMInterpreter$PROPS" />
-      <unit id="8475187935300311540" at="86,0,91,0" name="naomod.fsm.behavior.FSMInterpreter$LINKS" />
-      <unit id="8475187935300523753" at="64,187,70,9" name="naomod.fsm.behavior.FSMInterpreter$2$1" />
-      <unit id="1402874804434897174" at="62,107,72,5" name="naomod.fsm.behavior.FSMInterpreter$2" />
-      <unit id="1402874804434750269" at="43,107,54,5" name="naomod.fsm.behavior.FSMInterpreter$1" />
-      <unit id="8475187935300311540" at="20,0,92,0" name="naomod.fsm.behavior.FSMInterpreter" />
+      <scope id="8475187935300451825" at="39,0,56,0" />
+      <unit id="8475187935300311540" at="67,0,70,0" name="naomod.fsm.behavior.FSMInterpreter$CONCEPTS" />
+      <unit id="8475187935300311540" at="71,0,74,0" name="naomod.fsm.behavior.FSMInterpreter$PROPS" />
+      <unit id="2629166348373332092" at="59,107,63,5" name="naomod.fsm.behavior.FSMInterpreter$2" />
+      <unit id="8475187935300311540" at="75,0,79,0" name="naomod.fsm.behavior.FSMInterpreter$LINKS" />
+      <unit id="8475187935300523753" at="44,187,50,9" name="naomod.fsm.behavior.FSMInterpreter$1$1" />
+      <unit id="1402874804434897174" at="42,107,52,5" name="naomod.fsm.behavior.FSMInterpreter$1" />
+      <unit id="8475187935300311540" at="20,0,80,0" name="naomod.fsm.behavior.FSMInterpreter" />
     </file>
   </root>
   <root nodeRef="r:3d88fa52-25b4-4255-9afa-3677d8d08511(naomod.fsm.behavior)/8475187935300340364">
     <file name="State__BehaviorDescriptor.java">
-      <node id="8475187935300340364" at="27,0,28,0" concept="9" trace="CONCEPT" />
-      <node id="8475187935300340364" at="29,0,30,0" concept="9" trace="findOutgoingTransitionWithInput_id7mtUCoggcEB" />
-      <node id="8475187935300340364" at="31,0,32,0" concept="9" trace="BH_METHODS" />
-      <node id="8475187935300367202" at="38,39,39,81" concept="7" />
-      <node id="8475187935300340364" at="48,114,49,21" concept="2" />
-      <node id="8475187935300340364" at="53,114,54,49" concept="6" />
-      <node id="8475187935300340364" at="55,26,56,56" concept="12" />
-      <node id="8475187935300340364" at="59,13,60,105" concept="7" />
-      <node id="8475187935300340364" at="61,14,62,58" concept="12" />
-      <node id="8475187935300340364" at="67,128,68,49" concept="6" />
-      <node id="8475187935300340364" at="69,26,70,56" concept="12" />
-      <node id="8475187935300340364" at="73,14,74,58" concept="12" />
-      <node id="8475187935300340364" at="80,48,81,22" concept="7" />
-      <node id="8475187935300340364" at="86,40,87,19" concept="7" />
-      <node id="8475187935300340364" at="91,0,92,0" concept="9" trace="outgoingTransitions$AIHp" />
-      <node id="8475187935300340364" at="95,0,96,0" concept="9" trace="input$zU4O" />
-      <node id="8475187935300340364" at="33,0,35,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="8475187935300340364" at="44,0,46,0" concept="1" trace="State__BehaviorDescriptor#()V" />
-      <node id="8475187935300367200" at="38,0,41,0" concept="5" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="8475187935300340364" at="54,49,57,5" concept="4" />
-      <node id="8475187935300340364" at="68,49,71,5" concept="4" />
-      <node id="8475187935300340364" at="47,0,51,0" concept="5" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
-      <node id="8475187935300340364" at="71,5,75,5" concept="11" />
-      <node id="8475187935300366545" at="36,123,41,7" concept="7" />
-      <node id="8475187935300340364" at="78,0,83,0" concept="5" trace="getDeclaredMethods#()Ljava/util/List;" />
-      <node id="8475187935300340364" at="84,0,89,0" concept="5" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
-      <node id="8475187935300340364" at="57,5,63,5" concept="11" />
-      <node id="8475187935300340364" at="36,0,43,0" concept="10" trace="findOutgoingTransitionWithInput_id7mtUCoggcEB#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="8475187935300340364" at="66,0,77,0" concept="5" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
-      <node id="8475187935300340364" at="52,0,65,0" concept="5" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
-      <scope id="8475187935300340364" at="33,63,33,63" />
-      <scope id="8475187935300340364" at="44,43,44,43" />
-      <scope id="8475187935300367201" at="38,39,39,81" />
-      <scope id="8475187935300340364" at="48,114,49,21" />
-      <scope id="8475187935300340364" at="55,26,56,56" />
-      <scope id="8475187935300340364" at="59,13,60,105" />
-      <scope id="8475187935300340364" at="61,14,62,58" />
-      <scope id="8475187935300340364" at="69,26,70,56" />
-      <scope id="8475187935300340364" at="73,14,74,58" />
-      <scope id="8475187935300340364" at="80,48,81,22" />
-      <scope id="8475187935300340364" at="86,40,87,19" />
-      <scope id="8475187935300340364" at="33,0,35,0">
+      <node id="8475187935300340364" at="29,0,30,0" concept="9" trace="CONCEPT" />
+      <node id="8475187935300340364" at="31,0,32,0" concept="9" trace="computeStep_id4jTNCyx5uNU" />
+      <node id="8475187935300340364" at="33,0,34,0" concept="9" trace="BH_METHODS" />
+      <node id="4970230749993500660" at="38,114,39,73" concept="6" />
+      <node id="4970230749993505887" at="39,73,40,0" concept="8" />
+      <node id="4970230749993506981" at="44,43,45,85" concept="7" />
+      <node id="4970230749993551397" at="48,42,49,47" concept="2" />
+      <node id="4970230749993563183" at="50,16,51,117" concept="2" />
+      <node id="4970230749993500237" at="54,7,55,0" concept="8" />
+      <node id="4970230749993500739" at="55,0,56,24" concept="7" />
+      <node id="8475187935300340364" at="63,114,64,21" concept="2" />
+      <node id="8475187935300340364" at="68,114,69,49" concept="6" />
+      <node id="8475187935300340364" at="70,26,71,56" concept="12" />
+      <node id="8475187935300340364" at="74,13,75,90" concept="7" />
+      <node id="8475187935300340364" at="76,14,77,58" concept="12" />
+      <node id="8475187935300340364" at="82,128,83,49" concept="6" />
+      <node id="8475187935300340364" at="84,26,85,56" concept="12" />
+      <node id="8475187935300340364" at="88,14,89,58" concept="12" />
+      <node id="8475187935300340364" at="95,48,96,22" concept="7" />
+      <node id="8475187935300340364" at="101,40,102,19" concept="7" />
+      <node id="8475187935300340364" at="106,0,107,0" concept="9" trace="outgoingTransitions$AIHp" />
+      <node id="8475187935300340364" at="110,0,111,0" concept="9" trace="input$zU4O" />
+      <node id="8475187935300340364" at="35,0,37,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4970230749993553730" at="50,14,52,9" concept="0" />
+      <node id="8475187935300340364" at="59,0,61,0" concept="1" trace="State__BehaviorDescriptor#()V" />
+      <node id="4970230749993506979" at="44,0,47,0" concept="5" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="8475187935300340364" at="69,49,72,5" concept="4" />
+      <node id="8475187935300340364" at="83,49,86,5" concept="4" />
+      <node id="8475187935300340364" at="62,0,66,0" concept="5" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="8475187935300340364" at="86,5,90,5" concept="11" />
+      <node id="4970230749993506186" at="42,25,47,11" concept="6" />
+      <node id="4970230749993511922" at="47,11,52,9" concept="4" />
+      <node id="8475187935300340364" at="93,0,98,0" concept="5" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="8475187935300340364" at="99,0,104,0" concept="5" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="8475187935300340364" at="72,5,78,5" concept="11" />
+      <node id="8475187935300340364" at="81,0,92,0" concept="5" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="4970230749993496338" at="42,0,54,0" concept="5" trace="run#()V" />
+      <node id="8475187935300340364" at="67,0,80,0" concept="5" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="4970230749993496337" at="40,0,54,7" concept="2" />
+      <node id="8475187935300340364" at="38,0,58,0" concept="10" trace="computeStep_id4jTNCyx5uNU#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lnaomod/fsm/behavior/StepResult;" />
+      <scope id="8475187935300340364" at="35,63,35,63" />
+      <scope id="8475187935300340364" at="59,43,59,43" />
+      <scope id="4970230749993506980" at="44,43,45,85" />
+      <scope id="4970230749993511924" at="48,42,49,47" />
+      <scope id="4970230749993553731" at="50,16,51,117" />
+      <scope id="8475187935300340364" at="63,114,64,21" />
+      <scope id="8475187935300340364" at="70,26,71,56" />
+      <scope id="8475187935300340364" at="74,13,75,90" />
+      <scope id="8475187935300340364" at="76,14,77,58" />
+      <scope id="8475187935300340364" at="84,26,85,56" />
+      <scope id="8475187935300340364" at="88,14,89,58" />
+      <scope id="8475187935300340364" at="95,48,96,22" />
+      <scope id="8475187935300340364" at="101,40,102,19" />
+      <scope id="8475187935300340364" at="35,0,37,0">
         <var name="__thisNode__" id="8475187935300340364" />
       </scope>
-      <scope id="8475187935300340364" at="44,0,46,0" />
-      <scope id="8475187935300367200" at="38,0,41,0">
-        <var name="it" id="8475187935300367200" />
+      <scope id="8475187935300340364" at="59,0,61,0" />
+      <scope id="4970230749993506979" at="44,0,47,0">
+        <var name="it" id="4970230749993506979" />
       </scope>
-      <scope id="8475187935300340364" at="47,0,51,0">
+      <scope id="8475187935300340364" at="62,0,66,0">
         <var name="constructor" id="8475187935300340364" />
         <var name="node" id="8475187935300340364" />
         <var name="parameters" id="8475187935300340364" />
       </scope>
-      <scope id="8475187935300340394" at="36,123,41,7" />
-      <scope id="8475187935300340364" at="78,0,83,0" />
-      <scope id="8475187935300340364" at="84,0,89,0" />
-      <scope id="8475187935300340364" at="36,0,43,0">
-        <var name="__thisNode__" id="8475187935300340364" />
-        <var name="input" id="8475187935300340515" />
-      </scope>
-      <scope id="8475187935300340364" at="67,128,75,5">
+      <scope id="8475187935300340364" at="93,0,98,0" />
+      <scope id="8475187935300340364" at="99,0,104,0" />
+      <scope id="8475187935300340364" at="82,128,90,5">
         <var name="methodIndex" id="8475187935300340364" />
       </scope>
-      <scope id="8475187935300340364" at="53,114,63,5">
+      <scope id="4970230749993496339" at="42,25,52,9">
+        <var name="candidateTransition" id="4970230749993506189" />
+      </scope>
+      <scope id="8475187935300340364" at="68,114,78,5">
         <var name="methodIndex" id="8475187935300340364" />
       </scope>
-      <scope id="8475187935300340364" at="66,0,77,0">
+      <scope id="8475187935300340364" at="81,0,92,0">
         <var name="concept" id="8475187935300340364" />
         <var name="method" id="8475187935300340364" />
         <var name="parameters" id="8475187935300340364" />
       </scope>
-      <scope id="8475187935300340364" at="52,0,65,0">
+      <scope id="4970230749993496338" at="42,0,54,0" />
+      <scope id="8475187935300340364" at="67,0,80,0">
         <var name="method" id="8475187935300340364" />
         <var name="node" id="8475187935300340364" />
         <var name="parameters" id="8475187935300340364" />
       </scope>
-      <unit id="8475187935300340364" at="90,0,93,0" name="naomod.fsm.behavior.State__BehaviorDescriptor$LINKS" />
-      <unit id="8475187935300340364" at="94,0,97,0" name="naomod.fsm.behavior.State__BehaviorDescriptor$PROPS" />
-      <unit id="8475187935300367200" at="37,122,41,5" name="naomod.fsm.behavior.State__BehaviorDescriptor$1" />
-      <unit id="8475187935300340364" at="26,0,98,0" name="naomod.fsm.behavior.State__BehaviorDescriptor" />
+      <scope id="4970230749993495805" at="38,114,56,24">
+        <var name="result" id="4970230749993500661" />
+      </scope>
+      <scope id="8475187935300340364" at="38,0,58,0">
+        <var name="__thisNode__" id="8475187935300340364" />
+        <var name="input" id="4970230749993496092" />
+      </scope>
+      <unit id="8475187935300340364" at="105,0,108,0" name="naomod.fsm.behavior.State__BehaviorDescriptor$LINKS" />
+      <unit id="8475187935300340364" at="109,0,112,0" name="naomod.fsm.behavior.State__BehaviorDescriptor$PROPS" />
+      <unit id="4970230749993506979" at="43,147,47,9" name="naomod.fsm.behavior.State__BehaviorDescriptor$1$1" />
+      <unit id="4970230749993496338" at="41,94,54,5" name="naomod.fsm.behavior.State__BehaviorDescriptor$1" />
+      <unit id="8475187935300340364" at="28,0,113,0" name="naomod.fsm.behavior.State__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

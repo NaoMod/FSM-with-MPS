@@ -18,21 +18,21 @@ import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 
 public final class Interpreter_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
   private Collection<IntentionExecutable> myCachedExecutable;
+
   public Interpreter_Intention() {
     super(Kind.NORMAL, false, new SNodePointer("r:e660b1ef-0ec1-4d6f-a8f0-b4ebf2f4fb77(naomod.fsm.intentions)", "8475187935300280724"));
   }
+
   @Override
   public String getPresentation() {
     return "Interpreter";
   }
-  @Override
-  public boolean isApplicable(final SNode node, final EditorContext editorContext) {
-    return true;
-  }
+
   @Override
   public boolean isSurroundWith() {
     return false;
   }
+
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     if (myCachedExecutable == null) {
       myCachedExecutable = Collections.<IntentionExecutable>singletonList(new IntentionImplementation());
@@ -42,19 +42,30 @@ public final class Interpreter_Intention extends AbstractIntentionDescriptor imp
   /*package*/ final class IntentionImplementation extends AbstractIntentionExecutable {
     public IntentionImplementation() {
     }
+
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
       return "Run the Interpreter";
     }
+
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       FSMContext context = new FSMContext(node);
       FSMInterpreter interpreter = new FSMInterpreter(context);
       interpreter.launchUI();
     }
+
+    @Override
+    public boolean isApplicable(final SNode node, final EditorContext editorContext) {
+      return true;
+    }
+
+
+
     @Override
     public IntentionDescriptor getDescriptor() {
       return Interpreter_Intention.this;
     }
+
   }
 }

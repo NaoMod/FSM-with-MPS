@@ -6,13 +6,15 @@ import jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
@@ -26,19 +28,32 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class State__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b99L, "naomod.fsm.structure.State");
 
-  public static final SMethod<SNode> findOutgoingTransitionWithInput_id7mtUCoggcEB = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("findOutgoingTransitionWithInput").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("7mtUCoggcEB").build(SMethodBuilder.createJavaParameter(String.class, ""));
+  public static final SMethod<StepResult> computeStep_id4jTNCyx5uNU = new SMethodBuilder<StepResult>(new SJavaCompoundTypeImpl(StepResult.class)).name("computeStep").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4jTNCyx5uNU").build(SMethodBuilder.createJavaParameter(String.class, ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(findOutgoingTransitionWithInput_id7mtUCoggcEB);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(computeStep_id4jTNCyx5uNU);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
-  /*package*/ static SNode findOutgoingTransitionWithInput_id7mtUCoggcEB(@NotNull SNode __thisNode__, final String input) {
-    return ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.outgoingTransitions$AIHp)).findFirst(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SPropertyOperations.getString(it, PROPS.input$zU4O).equals(input);
+  /*package*/ static StepResult computeStep_id4jTNCyx5uNU(@NotNull final SNode __thisNode__, final String input) {
+    final Wrappers._T<StepResult> result = new Wrappers._T<StepResult>();
+
+    SNodeOperations.getModel(__thisNode__).getRepository().getModelAccess().runReadAction(new Runnable() {
+      public void run() {
+        SNode candidateTransition = ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.outgoingTransitions$AIHp)).findFirst(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SPropertyOperations.getString(it, PROPS.input$zU4O).equals(input);
+          }
+        });
+        if (candidateTransition == null) {
+          result.value = new StepResult(false);
+        } else {
+          result.value = Transition__BehaviorDescriptor.computeStep_id4jTNCyx5YvT.invoke(candidateTransition, input);
+        }
       }
     });
+
+    return result.value;
   }
 
   /*package*/ State__BehaviorDescriptor() {
@@ -57,7 +72,7 @@ public final class State__BehaviorDescriptor extends BaseBHDescriptor {
     }
     switch (methodIndex) {
       case 0:
-        return (T) ((SNode) findOutgoingTransitionWithInput_id7mtUCoggcEB(node, (String) parameters[0]));
+        return (T) ((StepResult) computeStep_id4jTNCyx5uNU(node, (String) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

@@ -6,16 +6,16 @@ import javax.swing.SwingUtilities;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
-import org.jetbrains.mps.openapi.model.SNode;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.Objects;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SProperty;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 public class FSMInterpreter {
 
@@ -28,35 +28,15 @@ public class FSMInterpreter {
     SwingUtilities.invokeLater(new UI(this, SPropertyOperations.getString(SNodeOperations.as(SNodeOperations.getContainingRoot(context.getCurrentState()), CONCEPTS.FSM$3f), PROPS.name$MnvL)));
   }
 
-  public String computeStep(final String inputString) {
-
-    if (inputString.equals("")) {
-      if (checkFinalState()) {
-        return "Execution succesful !";
-      } else {
-        return "Execution failed !";
-      }
+  public StepResult computeStep(String input) {
+    StepResult result = State__BehaviorDescriptor.computeStep_id4jTNCyx5uNU.invoke(context.getCurrentState(), input);
+    if (result.isPossible()) {
+      context.setCurrentState(result.getCurrentState());
     }
-
-    final Wrappers._T<String> outputString = new Wrappers._T<String>();
-
-    SNodeOperations.getModel(context.getCurrentState()).getRepository().getModelAccess().runReadAction(new Runnable() {
-      public void run() {
-        SNode candidateTransition = State__BehaviorDescriptor.findOutgoingTransitionWithInput_id7mtUCoggcEB.invoke(context.getCurrentState(), inputString);
-
-        if (!((candidateTransition == null))) {
-          context.setCurrentState(SLinkOperations.getTarget(candidateTransition, LINKS.target$$6wD));
-          outputString.value = SPropertyOperations.getString(candidateTransition, PROPS.output$$0qf);
-        } else {
-          outputString.value = "No transition with input " + inputString + " from the current state.\n Execution failed !";
-        }
-      }
-    });
-
-    return outputString.value;
+    return result;
   }
 
-  private boolean checkFinalState() {
+  public boolean checkFinalState() {
     final Wrappers._boolean isFinal = new Wrappers._boolean(false);
 
     SNodeOperations.getModel(context.getCurrentState()).getRepository().getModelAccess().runReadAction(new Runnable() {
@@ -74,17 +54,25 @@ public class FSMInterpreter {
     return isFinal.value;
   }
 
+  public String getInitalStateName() {
+    final Wrappers._T<String> initialStateName = new Wrappers._T<String>();
+    SNodeOperations.getModel(context.getCurrentState()).getRepository().getModelAccess().runReadAction(new Runnable() {
+      public void run() {
+        initialStateName.value = SPropertyOperations.getString(context.getCurrentState(), PROPS.name$MnvL);
+      }
+    });
+    return initialStateName.value;
+  }
+
   private static final class CONCEPTS {
     /*package*/ static final SConcept FSM$3f = MetaAdapterFactory.getConcept(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, "naomod.fsm.structure.FSM");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty output$$0qf = MetaAdapterFactory.getProperty(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0ba6L, 0x759dea86103a0badL, "output");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink target$$6wD = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0ba6L, 0x759dea86103a0bb2L, "target");
     /*package*/ static final SContainmentLink finalStates$BaBL = MetaAdapterFactory.getContainmentLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0b98L, 0x759dea86103a0beeL, "finalStates");
     /*package*/ static final SReferenceLink state$Bb$k = MetaAdapterFactory.getReferenceLink(0xc3333435bd7f4f7cL, 0x9eabb88e0228cd0eL, 0x759dea86103a0be9L, 0x759dea86103a0beaL, "state");
   }

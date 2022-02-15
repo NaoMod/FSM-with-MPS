@@ -24,7 +24,7 @@ To launch an execution of your automata place your cursor on the first line and 
 
 image:interpreter_intention.png[Interpreter Intention]
 
-You can then enter your input and press the 'Compute' button to trigger the transition with said input (if it exists). To check if the execution is successful (ie. the current state is final), enter an empty input.
+You can then enter your input and press the 'Compute Step' button to trigger the transition with said input (if it exists). The output string of the last transition as well as the current state are displayed in dedicated fields. To check if the execution is successful (ie. the current state is final), press the 'End' button. The 'Computation Result' field will show the outcome of the execution.
  
 ## Exploring the Definition
 
