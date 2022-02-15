@@ -4,6 +4,8 @@
 
 This project shows an implementation of a Domain Specific Language for Finite State Machines with the language workbench MPS.
 
+To properly run the project, you will need to download a specific MPS plugin. Plugins management is done in File > Settings > Plugins. Then, search for https://plugins.jetbrains.com/plugin/13255-mps-table-editor-component[MPS Table Editor Component] in the marketplace and install the plugin.
+
 ## Using the DSL
 
 Models can be created using the DSL in the solution naomod.fsm.sandbox.
@@ -39,6 +41,8 @@ The editor aspect handles the defintion of the concrete syntax for our language.
 The constraints aspect is used to describe part of the static semantics, the other part is in the typesystem aspect.
 
 The behavior aspect describes operationnal semantics for the State concept, as well as classes implementing the interpreter. FSMInterpreter is the interpreter itself, FSMContext is the class storing the execution context and is used by the interpreter, and UI handles the graphical interface used by the user to interact with the interpreter. The button launching the interpreter is described in the intention aspect.
+
+If changes are made to the language definition, make sure to rebuild it by right-clicking on 'naomod.fsm' and choosing 'Rebuild Language'.
 
 ## Known Issues
 
